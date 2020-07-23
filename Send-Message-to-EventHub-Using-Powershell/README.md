@@ -16,9 +16,9 @@ Here is how we do it:
 
 1. Change the below param values in the script PostMessage.ps1
 
-    param (
+    param (\
         [string]$uri="eventhubnamespace.servicebus.windows.net/eventhubname",\
-        [string]$policyName="policyName",\   
+        [string]$policyName="policyName",\
         [string]$policyKey="Xd64pfQW5k8RhTWLMITXKj23",\
         [string]$body = '{\
         "id": "ab4fee7e-e065-4767-b214-37ab22d01ae9",\
@@ -29,16 +29,21 @@ Here is how we do it:
     )
 
     eventhubnamespace: Event hub namespace
+
     eventhubname: Event hub name to which you want to send the message
-    policyName: Shared access policy name, this is typically the shared access policy on the eventhub. 
-                If you don't have shared access policy configured on event hub, You can use shared access policy name configured on the event hub namespace.
+
+    policyName: Shared access policy name, this is typically the shared access policy on the eventhub. If you don't have shared access policy configured on event hub, You can use shared access policy name configured on the event hub namespace.
+
     policyKey: The shared access key corresponding to the shared access policy.
+
     body: The message to be sent to the eventhub
 
 2. Open powershell and login into Azure account, assumimg az module for powershell is installed.
+
     az login
 
 3. Set the current subscription to the one that have event hub
+
     az account set --subscription <subscriptionid>
 
 4. Execute the script ./PostMessage.ps1
