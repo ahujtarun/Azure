@@ -1,6 +1,6 @@
 param (
     [string]$uri="eventhubnamespace.servicebus.windows.net/eventhubname", 
-    [string]$policyName="policyName",    
+    [string]$policyName="policyname",    
     [string]$policyKey="Xd64pfQW5k8RhTWLMITXKj23",
     [string]$body = '{
 	   "id": "ab4fee7e-e065-4767-b214-37ab22d01ae9",
