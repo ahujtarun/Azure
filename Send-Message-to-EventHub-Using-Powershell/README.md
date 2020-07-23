@@ -29,13 +29,9 @@ Here is how we do it:
     )
 
     **eventhubnamespace:** Event hub namespace
-
     **eventhubname:** Event hub name to which you want to send the message
-
     **policyName:** Shared access policy name, this is typically the shared access policy on the eventhub. If you don't have shared access policy configured on event hub, You can use shared access policy name configured on the event hub namespace.
-
     **policyKey:** The shared access key corresponding to the shared access policy.
-
     **body:** The message to be sent to the eventhub
 
 2. **Open powershell and login into Azure account, assumimg az module for powershell is installed.**
