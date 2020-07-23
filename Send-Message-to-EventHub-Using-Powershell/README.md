@@ -1,4 +1,4 @@
-# Post message to event hub
+# Post a message to Azure Event Hub
 
 Azure event hub is used widely in event driven applications. 
 
@@ -17,15 +17,15 @@ Here is how we do it:
 1. Change the below param values in the script PostMessage.ps1
 
     param (
-        [string]$uri="eventhubnamespace.servicebus.windows.net/eventhubname", 
-        [string]$policyName="policyName",    
-        [string]$policyKey="Xd64pfQW5k8RhTWLMITXKj23",
-        [string]$body = '{
-        "id": "ab4fee7e-e065-4767-b214-37ab22d01ae9",
-        "metaData": "test message",
-        "readDate": "0001-01-01T00:00:00",
-        "createdDate": "2020-03-06T15:49:26.9937576+00:00"
-        }'
+        [string]$uri="eventhubnamespace.servicebus.windows.net/eventhubname",\
+        [string]$policyName="policyName",\   
+        [string]$policyKey="Xd64pfQW5k8RhTWLMITXKj23",\
+        [string]$body = '{\
+        "id": "ab4fee7e-e065-4767-b214-37ab22d01ae9",\
+        "metaData": "test message",\
+        "readDate": "0001-01-01T00:00:00",\
+        "createdDate": "2020-03-06T15:49:26.9937576+00:00"\
+        }'\
     )
 
     eventhubnamespace: Event hub namespace
