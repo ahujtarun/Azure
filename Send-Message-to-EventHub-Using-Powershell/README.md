@@ -40,7 +40,7 @@ Here is how we do it:
 
 3. **Set the current subscription to the one that have event hub**
 
-    az account set --subscription <subscriptionid>
+    az account set --subscription subscriptionid
 
 4. **Execute the script ./PostMessage.ps1**
 
